@@ -1,16 +1,17 @@
-# Compiled class file
+# Java
+## Compiled class file
 *.class
 
-# Log file
+## Log file
 *.log
 
-# BlueJ files
+## BlueJ files
 *.ctxt
 
-# Mobile Tools for Java (J2ME)
+## Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
-# Package Files #
+## Package Files #
 *.jar
 *.war
 *.nar
@@ -19,6 +20,21 @@
 *.tar.gz
 *.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+## virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# Vagrant 
+## General
+.vagrant/
+
+## Log files (if you are creating logs in debug mode, uncomment 
+this)
+*.log
+
+## Vagrant Patch 
+*.box
+
+# Ignore all .txt files except requirement.txt
+*.txt
+!requirements.txt
