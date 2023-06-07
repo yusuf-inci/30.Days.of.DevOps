@@ -1,7 +1,7 @@
 # 30-DAYS-OF-DEVOPS
 - Source: https://github.com/jaiswaladi246/30-Days-Of-DevOps.git
 
-## https://www.youtube.com/@devopsshack
+
 
 ## Day 1-5: Introduction to DevOps 🔄
 
