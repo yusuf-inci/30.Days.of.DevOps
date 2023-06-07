@@ -51,3 +51,4 @@ In this scenario, CD is implemented as follows:
 5. `Agility and Flexibility`: The ability to iterate and release software frequently enables organizations to respond rapidly to changing market demands and user feedback.
 
 In summary, DevOps is a cultural and operational approach that promotes collaboration, automation, and continuous improvement. CI/CD are key practices within the DevOps framework, enabling organizations to automate software builds, testing, and deployments, resulting in faster, more reliable software delivery.
+test for github
