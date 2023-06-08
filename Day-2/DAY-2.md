@@ -57,4 +57,3 @@ Here are some common Maven commands:
 - `mvn site-deploy`: Deploys the generated documentation to a remote web server.  
 - `mvn clean`: Executes the clean phase, deleting any previous build outputs. 
 
-##### https://www.youtube.com/@devopsshack
