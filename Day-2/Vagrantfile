@@ -1,0 +1,24 @@
+# Vagrant configuration version
+Vagrant.configure("2") do |config|
+
+    # Enable and configure hostmanager plugin
+    config.hostmanager.enabled = true 
+    config.hostmanager.manage_host = true
+
+    # Define TestServer VM
+    config.vm.define "Test" do |test|
+        # Set the box for TestServer VM
+        test.vm.box = "ubuntu/focal64"
+        # Set the hostname for TestServer VM
+        test.vm.hostname = "TestServer"
+        # Configure a private network for TestServer VM with a static IP
+        test.vm.network "private_network", ip: "192.168.56.11"
+        # Configure VirtualBox provider settings for TestServer VM
+        test.vm.provider "virtualbox" do |vb|
+            vb.memory = "4096" # Set memory to 4 GB
+            vb.cpus = "4" # Set number of CPUs to 4
+        end
+        # Provision TestServer VM with a shell script
+        test.vm.provision "shell", path: "userdata/bootstrap.sh"
+    end
+end
