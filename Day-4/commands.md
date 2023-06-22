@@ -4,3 +4,14 @@
 - git fetch --prune 
 - or
 - 'git remote prune https://github.com/spring-petclinic/spring-framework-petclinic.git' to remove any old, conflicting branches
+
+# Plugins to install
+- Eclipse Temurin installerVersion
+- openJDK-native-pluginVersion
+- OWASP Dependency-CheckVersion
+- DockerVersion
+- Docker PipelineVersion
+- docker-build-stepVersion
+- CloudBees Docker Build and PublishVersion
+- SonarQube Scanner
+- 

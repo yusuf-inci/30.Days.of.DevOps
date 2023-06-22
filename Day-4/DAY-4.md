@@ -223,6 +223,14 @@ pipeline {
 
 5. Click on "Save" to save the job configuration.
 
+6. Give a permission  
+- `cd /opt`
+- `sudo chmod -R 757 apache-tomcat-9.0.65`
+
+7. Skip test cases 
+-  `sh "mvn clean package -Dskiptests=true"`
+
+
 ### **Multibranch Job**
 
 1. From the Jenkins dashboard, click on "New Item" to create a new job.

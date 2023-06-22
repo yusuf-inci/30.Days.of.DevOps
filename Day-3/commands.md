@@ -76,6 +76,8 @@ complete the comment add `-->` to the end of the line
 `java --version`
 
 
-
-
+- add jenkins user to sudoers
+`sudo visudo`
+- Locate the line that starts with %sudo or %admin. These lines define user groups with sudo privileges. Add the following line below the %sudo or %admin line:
+`jenkins ALL=(ALL) NOPASSWD: ALL`
 24:00
