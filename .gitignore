@@ -38,3 +38,21 @@ this)
 # Ignore all .txt files except requirement.txt
 *.txt
 !requirements.txt
+!script.txt
+!Steps.txt
+
+# Eclipse
+.settings/
+.classpath
+.project
+bin/
+
+# IntelliJ IDEA
+.idea
+*.iml
+
+# Maven
+target/
+
+# OS
+.DS_Store
