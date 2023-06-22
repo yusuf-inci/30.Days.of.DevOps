@@ -108,7 +108,11 @@ In this guide, we will walk you through the process of installing plugins, confi
 
 1. From the Jenkins dashboard, click on "Manage Jenkins" in the left sidebar.
 2. Select "Global Tool Configuration" to access the tool configuration page.
-3. Scroll down to the section corresponding to the tool you want to configure (e.g., JDK, Git, Maven).
+3. Scroll down to the section corresponding to the tool you want to configure (e.g., JDK, Git, Maven). 
+- jdk11 --> install from adoptium --> jdk-11.019+7
+- maven --> maven3 --> 3.6.0
+- Dependency-Check --> dp --> Dependency-Check --> 6.5.1
+- Docker --> docker --> Download from docker.com --> latest
 4. Click on the "Add JDK"/"Add Git"/"Add Maven" button to configure each tool individually.
 5. Provide the necessary details such as name, path, version, etc., depending on the tool you are configuring.
 6. Click on "Save" to save the global tool configuration.
@@ -228,7 +232,13 @@ pipeline {
 - `sudo chmod -R 757 apache-tomcat-9.0.65`
 
 7. Skip test cases 
--  `sh "mvn clean package -Dskiptests=true"`
+-  `sh "mvn clean package -DskipTests=true"`
+
+8. add jenkins user to sudoers
+`sudo visudo`
+- Locate the line that starts with %sudo or %admin. These lines define user groups 
+with sudo privileges. Add the following line below the %sudo or %admin line:
+`jenkins ALL=(ALL) NOPASSWD: ALL`
 
 
 ### **Multibranch Job**
