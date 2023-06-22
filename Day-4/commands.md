@@ -15,3 +15,17 @@
 - CloudBees Docker Build and PublishVersion
 - SonarQube Scanner
 - 
+
+# To make Jenkins listen on port 8082, follow these steps:
+Change the Environment="JENKINS_PORT=8080" to Environment="JENKINS_PORT=8082" in /usr/lib/systemd/system/jenkins.service
+
+`sudo sed -i -e 's/Environment="JENKINS_PORT=[0-9]\+"/Environment="JENKINS_PORT=8082"/' /usr/lib/systemd/system/jenkins.service`
+
+`sudo sed -i -e 's/^\s*#\s*AmbientCapabilities=CAP_NET_BIND_SERVICE/AmbientCapabilities=CAP_NET_BIND_SERVICE/' /usr/lib/systemd/system/jenkins.service`
+
+- Reload the systemctl daemon
+`sudo systemctl daemon-reload`
+- Restart Jenkins
+`sudo systemctl restart jenkins`
+- Verify that Jenkins is listening on port 8082
+`sudo lsof -i -n -P | grep jenkins`
