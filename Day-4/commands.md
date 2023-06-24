@@ -14,7 +14,7 @@
 - docker-build-stepVersion
 - CloudBees Docker Build and PublishVersion
 - SonarQube Scanner
-- 
+- OWASP Dependency-TrackVersion
 
 # To make Jenkins listen on port 8082, follow these steps:
 Change the Environment="JENKINS_PORT=8080" to Environment="JENKINS_PORT=8082" in /usr/lib/systemd/system/jenkins.service
