@@ -15,8 +15,8 @@ Vagrant.configure("2") do |config|
         jenkins.vm.network "private_network", ip: "192.168.55.11"
         # Configure VirtualBox provider settings for JenkinsServer VM
         jenkins.vm.provider "virtualbox" do |vb|
-            vb.memory = "8192" # Set memory to 8 GB
-            vb.cpus = "8" # Set number of CPUs to 8
+            vb.memory = "9216" # Set memory to 9 GB
+            vb.cpus = "9" # Set number of CPUs to 9
         end
         # Provision JenkinsServer VM with a shell script
         jenkins.vm.provision "shell", path: "userdata/jenkins.sh"
