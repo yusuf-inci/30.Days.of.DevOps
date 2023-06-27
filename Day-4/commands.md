@@ -29,4 +29,5 @@ Change the Environment="JENKINS_PORT=8080" to Environment="JENKINS_PORT=8082" in
 - Restart Jenkins
 `sudo systemctl restart jenkins`
 - Verify that Jenkins is listening on port 8082
-`sudo lsof -i -n -P | grep jenkins`
+`sudo lsof -i -n -P | grep jenkins` or
+`netstat -tuln | grep 8082`
