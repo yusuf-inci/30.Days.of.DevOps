@@ -48,17 +48,17 @@ pipeline {
                 // dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
             // }
         // }
-        
-        // stage('Build Docker Image') {
-            // steps {
-                // script {
-                    // withDockerRegistry(credentialsId: 'c9b058e5-bfe6-41f8-9b5d-dc0b0d2955ac', toolName: 'docker') {
-                        // sh "docker build -t shopping-cart -f docker/Dockerfile ."
-                        // sh "docker tag shopping-cart adijaiswal/shopping-cart:latest"
-                    // }
-                // }
-            // }
-        // }
+                
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    withDockerRegistry(credentialsId: '1a3d516e-caa3-4b4c-9afb-507634eb864b', toolName: 'docker') {
+                        sh "docker build -t shopping-cart -f shoppingcart/Dockerfile ."
+                        sh "docker tag shopping-cart 90041/shopping-cart:latest"
+                    }
+                }
+            }
+        }
         
         // stage('Push Docker Image') {
             // steps {
